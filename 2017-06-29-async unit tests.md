@@ -3,9 +3,9 @@ Today I learned about [ManualResetEventSlim](https://msdn.microsoft.com/en-us/li
 I used it to write unit tests that test concurrency issues in a client. I wanted to make sure that if register was called, then unregister was called while register was still waiting on an async result from the manager, the client would still end in an unregistered state. 
 
 
-using Moq; 
-using FluentAssertions;
-using System.Threading;
+        using Moq; 
+        using FluentAssertions;
+        using System.Threading;
 
         [TestMethod]
         public async Task Client_Register_ThenUnRegister()
