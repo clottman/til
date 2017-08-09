@@ -1,4 +1,4 @@
-Oren says - 
+[Oren](https://oren.codes/2017/01/04/multi-targeting-the-world-a-single-project-to-rule-them-all/) says - 
 > For some frameworks, like .NET 4.5, that’s all you need to do. However, targeting .NET Standard and .NET 4.x is far from “the world.” We can do better! 
 
 He goes on to explain how one could add a LanguageTargets property to your project file that will enable you to use platform-specific toolsets, like Windows Xaml or Android Resources, in our projects. At first I thought this was necessary if I wanted my shared project to be consumable by an Android project. 
@@ -21,4 +21,15 @@ Mobile.Core, which iOSClient claims it cannot reference, has this in its csproj:
 So, it should be able to be referenced. When we reverse the order so that `<TargetFrameworks>` lists `netstandard1.4` first, we got the opposite error: the Android project and other projects targeting `net461` claim they cannot reference Mobile.Core because it is targeting a different framework family. The errors are misleading as those projects continue to run functionality defined in Mobile.Core without a problem. 
 
 While re-targeting our projects to support .NET Standard 1.4 in addition to .NET Framework 4.6.1, another topic that confused me was the exact syntax of the various TargetFrameworks and [PackageTargetFallbacks](https://github.com/NuGet/Home/wiki/PackageTargetFallback-(new-design-for-Imports)) I could use. Is it Xamarin.iOS10, like some blog posts used, or xamarinios10? Is `net461` valid, or should I just use `net46` like I've seen in blog posts? After some digging, I found [the schema for Nuget Target Frameworks](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks) which answered these questions. 
+
+
+
+No post that lists specific bugs and implementation details for tooling is complete without version info, so here's what I have installed: 
+
+Visual Studio 15.2 (26430.13) 
+.NET Framework 4.7.02053 installed
+Nuget Package Manager 4.2.0
+Xamarin 4.5.0.486
+Xamarin.Android SDK 7.3.1.2
+Xamarin.iOS and Xamarin Mac SDK 10.10.0.37
 
