@@ -23,6 +23,7 @@ So, it should be able to be referenced. When we reverse the order so that `<Targ
 While re-targeting our projects to support .NET Standard 1.4 in addition to .NET Framework 4.6.1, another topic that confused me was the exact syntax of the various TargetFrameworks and [PackageTargetFallbacks](https://github.com/NuGet/Home/wiki/PackageTargetFallback-(new-design-for-Imports)) I could use. Is it Xamarin.iOS10, like some blog posts used, or xamarinios10? Is `net461` valid, or should I just use `net46` like I've seen in blog posts? After some digging, I found [the schema for Nuget Target Frameworks](https://docs.microsoft.com/en-us/nuget/schema/target-frameworks) which answered these questions. 
 
 
+Another issue we ran into - the new, SDK style csproj format removes the need to define DefaultNamespace, AssemblyName in AssemblyInfo.cs. Those are generated along when the csproj is built. If you were using the defaults for both of these, you can simply remove those attributes. If you were not using the defaults, you'll want to move the attributes you previously had in AssemblyInfo.cs for these properties to your csproj so that they stay the same as they were before. You can now set these from the Properties pane of a project (right click on your project and click Properties, then go to the Package submenu).  
 
 No post that lists specific bugs and implementation details for tooling is complete without version info, so here's what I have installed: 
 
