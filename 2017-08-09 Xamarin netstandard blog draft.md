@@ -10,6 +10,7 @@ The Xamarin docs say that you can use [one of three code-sharing strategies](htt
 
 Documentation provided by Xamarin for the .NET Standard code sharing option is almost non-existent. Instead, I followed two blog posts by Oren Novotny: [Using Xamarin Forms with .NET Standard VS 2017 Edition](https://oren.codes/2017/04/23/using-xamarin-forms-with-net-standard-vs-2017-edition/) and [https://oren.codes/2017/01/04/multi-targeting-the-world-a-single-project-to-rule-them-all/](https://oren.codes/2017/01/04/multi-targeting-the-world-a-single-project-to-rule-them-all/). These were both very detailed and useful jumping off points. I'm grateful to the author for their work putting them together. 
 
+I [created a demo solution](https://github.com/clottman/multitargetNetStandard) where you can follow the commit history to see exactly what I did to recreate this as a test. 
 The initial steps I followed from [Using Xamarin Forms with .NET Standard VS 2017 Edition](https://oren.codes/2017/04/23/using-xamarin-forms-with-net-standard-vs-2017-edition/) were:
 
 1. Create a PCL Cross Platform Forms app  (images 1 & 2 for create cross platform app)
@@ -108,7 +109,15 @@ So, it should be able to be referenced. When we reverse the order so that `<Targ
 
 
 
+## Tooling Info
+No post that lists specific bugs and implementation details for tooling is complete without version info, so here's what I have installed: 
 
+Visual Studio 15.2 (26430.13) 
+.NET Framework 4.7.02053 installed
+Nuget Package Manager 4.2.0
+Xamarin 4.5.0.486
+Xamarin.Android SDK 7.3.1.2
+Xamarin.iOS and Xamarin Mac SDK 10.10.0.37
 
 
 
