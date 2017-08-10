@@ -112,12 +112,12 @@ So, it should be able to be referenced. When we reverse the order so that `<Targ
 ## Tooling Info
 No post that lists specific bugs and implementation details for tooling is complete without version info, so here's what I have installed: 
 
-Visual Studio 15.2 (26430.13) 
-.NET Framework 4.7.02053 installed
-Nuget Package Manager 4.2.0
-Xamarin 4.5.0.486
-Xamarin.Android SDK 7.3.1.2
-Xamarin.iOS and Xamarin Mac SDK 10.10.0.37
+- Visual Studio 15.2 (26430.13) 
+- .NET Framework 4.7.02053 installed
+- Nuget Package Manager 4.2.0
+- Xamarin 4.5.0.486
+- Xamarin.Android SDK 7.3.1.2
+- Xamarin.iOS and Xamarin Mac SDK 10.10.0.37
 
 
 
