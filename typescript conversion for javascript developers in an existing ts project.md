@@ -42,8 +42,9 @@ function (x) {
 }
 ```
 
-    - What's that xType doing there? That's a type definition. It will prevent you from doing silly stuff later when you go to use that variable, so try to add them where you can. 
-     - What about the `: string` after the first parameter? That's defining the return type.  It's optional, but really nice to have. 
+  - What's that xType doing there? That's a type definition. It will prevent you from doing silly stuff later when you go to use that variable, so try to add them where you can. 
+  - What about the `: string` after the first parameter? That's defining the return type.  It's optional, but really nice to have. 
+     
  7. Remove `var self = this` and replace all `self.` with `this.`.  Trust typescript to figure out what you mean. 
 
 In projects with a Typescript linter: 
